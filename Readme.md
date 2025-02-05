@@ -32,7 +32,10 @@ VitalCamp is a Medical Camp Management System (MCMS) built using the MERN stack.
 1. **Clone the Repository:**
    ```sh
    git clone https://github.com/jahidulkanchan/VitalCamp.git
-   cd your-repo
+   cd server
+   npm start
+   cd client
+   npm start
    ```
 2. **Install Dependencies:**
    ```sh
