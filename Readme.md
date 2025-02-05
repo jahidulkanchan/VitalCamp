@@ -1,4 +1,4 @@
-# VitalCamp
+# VitalCamp(Medical Camp Management Application)
 
 ## Project Overview
 VitalCamp is a Medical Camp Management System (MCMS) built using the MERN stack. It provides an intuitive platform for organizers and participants to easily manage and coordinate medical camps. The system streamlines the process of organizing medical events, allowing users to register for camps, manage their personal details, track payment statuses, and receive real-time updates. Whether you’re an organizer looking to host a camp or a participant seeking medical assistance, VitalCamp simplifies the entire experience, fostering a seamless and efficient system for healthcare management.
