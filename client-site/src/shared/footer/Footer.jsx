@@ -8,7 +8,7 @@ import { useAuth } from "../../hooks/useAuth";
 const Footer = () => {
   const {user} = useAuth()
   return (
-    <footer className={`container mx-auto px-2 md:px-5 py-5`}>
+    <footer className={`container mx-auto px-2 border-t md:px-5 py-5`}>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-8">
         <div className="col-span-2">
         <Link className={`logo flex items-center`} to="/">

@@ -4,6 +4,7 @@ import AllFeedBack from "./AllFeedBack";
 import Banner from "./Banner";
 import FaqItems from "./FaqItems";
 import PopularCamp from "./PopularCamp";
+import Subscribe from "./Subscribe";
 
 const Home = () => {
   const {loading} = useAuth()
@@ -14,6 +15,7 @@ const Home = () => {
       <PopularCamp/>
       <AllFeedBack/>
       <FaqItems/>
+      <Subscribe/>
     </>
   );
 };
