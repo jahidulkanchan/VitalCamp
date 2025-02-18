@@ -1,31 +1,59 @@
-### Project Name: VitalCamp
+# VitalCamp(Medical Camp Management Application)
 
-#### Organizers User Email: admin@gmail.com
-#### Organizers Password: 123456 
-
-**Live Site Url**: [VitalCamp](https://vitalcamp.netlify.app)
-
-
-### Purpose of this Application:
+## Project Overview
 VitalCamp is a Medical Camp Management System (MCMS) built using the MERN stack. It provides an intuitive platform for organizers and participants to easily manage and coordinate medical camps. The system streamlines the process of organizing medical events, allowing users to register for camps, manage their personal details, track payment statuses, and receive real-time updates. Whether you’re an organizer looking to host a camp or a participant seeking medical assistance, VitalCamp simplifies the entire experience, fostering a seamless and efficient system for healthcare management.
 
+## Project Image
+![VitalCamp Screenshot](https://raw.githubusercontent.com/jahidulkanchan/VitalCamp/refs/heads/main/client-site/public/project1.png)
 
-### Features:
+## Technologies Used
+- React.js
+- Node.js
+- Express.js
+- MongoDB
+- Tailwind CSS
+- Vercel (Backend Hosting)
+
+## Core Features
 - **Integrated Payment System**: Secure and efficient payment processing for camp registrations and other transactions.
-- **User-Generated Content**: Users can create, edit, and delete their blogs.
-- **Personalized Wishlist**: Users can save their favorite blogs to a personalized wishlist for easy access.
-- **Title-based Search Bar**: Quickly search for blogs based on titles.
-- **Category Filters**: Filter blogs by categories such as Technology, Travel, Sports, Entertainment, and Lifestyle.
-- **Fully Secure Data Storage**: Ensures the safety and privacy of user data.
 - **Organizer Dashboard (MCMS)**: A dedicated dashboard for organizers to manage their profile, add new camps, and oversee registered camps.
 - **Participant Dashboard (MCMS)**: A personalized dashboard for participants to view analytics, manage profiles, check registered camps, and review payment history.
-- **Camp Search and Sorting**: Search camps by keywords, dates, or other criteria.Sort camps by registration count, fees, and alphabetical order.
+- **Camp Search and Sorting**: Search camps by keywords, dates, or other criteria. Sort camps by registration count, fees, and alphabetical order.
 - **Responsive Design and Notification System**: Fully responsive for mobile, tablet, and desktop, including dashboards. Uses sweet alerts and notifications for all CRUD operations and successful authentication.
 - **Role-Based Access Control**: Different user roles (Organizer(Admin), Participant) with specific access and permissions.
 
-### Used npm Packages:
-- **Tanstack Query**: For api data fetching.
-- **date-fns**: For date manipulation and formatting.
-- **axios**: For making HTTP requests.
-- **recharts**: For showing dashboard data analytics.
-- **axios**: For making HTTP requests.
+## Dependencies Used
+- `@tanstack/react-query`
+- `date-fns`
+- `axios`
+- `recharts`
+
+## How to Run the Project Locally
+1. **Clone the Repository:**
+   ```sh
+   git clone https://github.com/jahidulkanchan/VitalCamp.git
+   cd server
+   npm start
+   cd client
+   npm start
+   ```
+2. **Install Dependencies:**
+   ```sh
+   npm install
+   ```
+3. **Set Up Environment Variables:**
+   - Create a `.env` file in the root directory.
+   - Add required environment variables as specified.
+4. **Run the Development Server:**
+   ```sh
+   npm run dev
+   ```
+5. **Access the Application:**
+   - Open `http://localhost:3000` in your browser.
+
+## Live Project Link
+[VitalCamp Live Website](https://vitalcamp.netlify.app)
+
+## Additional Resources
+- **Organizer User Email**: admin@gmail.com
+- **Organizer Password**: 123456
