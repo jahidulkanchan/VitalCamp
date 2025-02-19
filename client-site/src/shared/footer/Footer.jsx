@@ -13,9 +13,9 @@ const Footer = () => {
         <div className="col-span-2">
         <Link className={`logo flex items-center`} to="/">
                      <img referrerPolicy="no-referrer"  className="h-[30px] md:h-[40px] mr-2" src='/VitalCamp.png' alt="logo" />
-                      <h3 className="text-xl md:text-2xl font-medium md:font-semibold">
-                        <span className="text-secondary">VitalCamp</span>
-                      </h3>
+                     <h3 className="text-xl md:text-2xl font-medium md:font-semibold">
+                <span className="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">VitalCamp</span>
+              </h3>
                     </Link>
         <p className="py-2 text-[15px] tracking-[.2px] sm:w-4/5">Sharing valuable insights and stories on Health, Wellness, Medical Services, Camp Coordination, and Volunteer Experiences to inspire and connect participants and organizers through high-quality</p>
         <p

@@ -16,9 +16,9 @@ const AboutUs = () => {
             </h2>
           <div className="mt-3 text-justify">
             <h3 className="text-lg md:text-xl font-medium">Bridging Healthcare & Community</h3>
-            <p>VitalCamp is dedicated to making medical camp management simple and efficient, ensuring healthcare services reach those in need. We help organizers plan, manage registrations, and coordinate resources effortlessly.</p>
+            <p className='text-gray-800'>VitalCamp is dedicated to making medical camp management simple and efficient, ensuring healthcare services reach those in need. We help organizers plan, manage registrations, and coordinate resources effortlessly.</p>
             <h3 className="text-lg md:text-xl font-medium mt-4">Empowering Participants & Organizers</h3>
-            <p>For participants, VitalCamp offers a smooth registration process and real-time updates. Our goal is to create a hassle-free experience, making healthcare more accessible and organized for everyone.</p>
+            <p className='text-gray-800'>For participants, VitalCamp offers a smooth registration process and real-time updates. Our goal is to create a hassle-free experience, making healthcare more accessible and organized for everyone.</p>
           </div>
         </div>
         <div className="right-content relative order-1 lg:order-2">
