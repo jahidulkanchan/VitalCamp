@@ -9,6 +9,7 @@ import { IoNotificationsOutline } from "react-icons/io5";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import Notification from "../../components/Notification";
+import { MdOutlineArrowDropDown } from "react-icons/md";
 
 const Navbar = () => {
   const navigate = useNavigate()
@@ -57,7 +58,7 @@ const Navbar = () => {
             <Link className={`logo flex items-center`} to="/">
              <img referrerPolicy="no-referrer"  className="h-[30px] object-cover md:h-[40px] mr-2" src={logoIcon} alt="logo" />
               <h3 className="text-xl md:text-2xl font-medium md:font-semibold">
-                <span className="text-secondary">VitalCamp</span>
+                <span className="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">VitalCamp</span>
               </h3>
             </Link>
           </div>
@@ -121,8 +122,10 @@ const Navbar = () => {
           </div>
           <div className="bar-icon flex justify-center items-center gap-4  ml-1 z-20  text-xl">
             {user && <>
-              <div  title="Profile Details" onClick={()=>handleToggleUser()} className={`w-8 border overflow-hidden cursor-pointer rounded-full bg-slate-50`}>
-              <img className="min-h-[30px]" src={user?.photoURL} alt="" />
+              <div  title="Profile Details" onClick={()=>handleToggleUser()} 
+              className={`w-fit flex items-center gap-0 justify-between border border-primary overflow-hidden cursor-pointer rounded-full bg-slate-50 px-2`}>
+              <img className="min-h-[30px] w-8" src={user?.photoURL} alt="profilePhoto" />
+              <span><MdOutlineArrowDropDown /></span>
             </div>
             {!isAdmin && 
               <button
