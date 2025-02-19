@@ -1,5 +1,6 @@
 import LoadingSpinner from "../../components/LoadingSpinner";
 import { useAuth } from "../../hooks/useAuth";
+import AboutUs from "./AboutUs";
 import AllFeedBack from "./AllFeedBack";
 import Banner from "./Banner";
 import Contact from "./Contact";
@@ -15,9 +16,10 @@ const Home = () => {
       <Banner/>
       <PopularCamp/>
       <AllFeedBack/>
+      <AboutUs/>
       <FaqItems/>
-      <Subscribe/>
       <Contact/>
+      <Subscribe/>
     </>
   );
 };
