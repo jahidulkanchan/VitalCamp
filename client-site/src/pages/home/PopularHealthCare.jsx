@@ -17,17 +17,17 @@ const PopularHealthCare = () => {
       <h2 className="text-center py-5 text-2xl md:text-4xl mb-4">Leading Medical Services</h2>
         <Marquee
           className="mb-2 md:mb-6"
-          gradient={true}
           gradientColor="white"
+          gradient={window.innerWidth <= 768 ? false : true}
           autoFill={true}
           speed={30}
         >
           {popularHealth.map((item, index) => (
             <div
-              className="text-center group md:min-w-[150px] flex items-center px-5 py-1 md:py-5 gap-3 mx-2 bg-gradient-to-t from-primary to-blue-600 border border-secondary rounded"
+              className="text-center group md:min-w-[150px] flex items-center px-5 py-1 md:py-5 gap-3 mx-2 bg-gradient-to-t from-primary to-blue-500 border border-secondary rounded"
               key={index}
             >
-              <p className="text-white text-xl font-medium">{item.name}</p>
+              <p className="text-white md:text-xl md:font-medium">{item.name}</p>
             </div>
           ))}
         </Marquee>
