@@ -9,8 +9,7 @@ const AboutUs = () => {
         <div className="gap-5 items-center grid lg:grid-cols-2">
         <div className="left-content order-2 lg:order-1">
         <h2 className="font-medium text-2xl md:text-3xl lg:text-4xl">
-          Improving Healthcare Access 
-            </h2>
+          Improving Healthcare Access</h2>
             <h2 className="font-medium text-2xl md:text-3xl lg:text-4xl bg-gradient-to-r from-primary
              to-secondary w-fit text-transparent bg-clip-text">
                Through Medical Camps

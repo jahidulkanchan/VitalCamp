@@ -45,4 +45,21 @@
       transform: rotate(360deg);
     }
   } 
+  /* Blaze animations */
+.blaze {
+  position: absolute;
+  animation: blazeAnimate 4s linear infinite;
+}
+  /* Keyframes for continuous left-to-right movement */
+  @keyframes blazeAnimate {
+      0% {
+        left: -40%;
+      }
+      50% {
+        left: 100%;
+      }
+      100%{
+        left: 100%;
+      }
+    }
 }
