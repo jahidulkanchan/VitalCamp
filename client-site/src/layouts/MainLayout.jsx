@@ -6,11 +6,11 @@ const MainLayout = () => {
   return (
     <>
       <Navbar />
-      <section className="mt-[75px] md:mt-[80px]">
-        <ScrollRestoration/>
+      <section className="mt-[75px] dark:bg-darkBg md:mt-[80px]">
+        <ScrollRestoration />
         <Outlet></Outlet>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 };

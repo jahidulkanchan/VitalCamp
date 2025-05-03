@@ -26,11 +26,11 @@ const PopularHealthCare = () => {
         id="PopularHealth"
         className="px-2 py-8 lg:px-5 lg:py-10 md:w-10/12 mx-auto"
       >
-      <h2 className="text-center py-5 text-2xl md:text-4xl mb-4">Leading Medical Services</h2>
+      <h2 className="text-center dark:text-darkLight py-5 text-2xl md:text-4xl mb-4">Leading Medical Services</h2>
         <Marquee
           className="mb-2 md:mb-6"
           gradient={isMd}
-          gradientColor="white"
+          gradientColor="none"
           autoFill={true}
           speed={30}
         >

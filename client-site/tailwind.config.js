@@ -13,7 +13,7 @@ export default {
         secondary: '#45C9BD',
         darkBg: '#070806',
         darkLight: '#f4fbf8',
-        darkCard: '#1a1e11',
+        darkCard: '#171717',
       },
     },
   },

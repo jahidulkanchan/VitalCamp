@@ -13,8 +13,8 @@ const PopularCamp = () => {
   },[allCamps])
   return (
     <>
-      <section className="container bg-white dark:bg-slate-800 py-10 px-5 mx-auto">
-        <h2 className="text-center py-5 text-2xl md:text-4xl">Most Popular Medical Camps</h2>
+      <section className="container bg-white dark:bg-darkBg py-10 px-5 mx-auto">
+        <h2 className="text-center py-5 text-2xl md:text-4xl text-black dark:text-white">Most Popular Medical Camps</h2>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4">
           {popularCamp?.map((item, i) => (
             <CampCard key={i} camp={item}></CampCard>
