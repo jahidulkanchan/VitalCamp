@@ -44,29 +44,35 @@ const FaqItems = () => {
   };
 
   return (
-    <div className="px-2 container py-10 mx-auto md:px-5">
-      <h2 className="text-2xl md:text-4xl text-center mb-5">Frequently Asked Questions</h2>
-      <div className='md:flex gap-8 items-center'>
-        <div>
-          <img className='max-w-[300px] md:max-w-[350px]  lg:max-w-[450px] w-fit mb-5' src={faqIcon} alt="" />
-        </div>
-      <div className="faq-list">
-        {data.map((item, index) => (
-          <div key={index} className="faq-item border-b py-3">
-            <div 
-              className="faq-question cursor-pointer font-semibold"
-              onClick={() => toggleAnswer(index)}
-            >
-              <span>{item.question}</span>
-            </div>
-            {activeIndex === index && (
-              <div className="faq-answer mt-2 text-gray-700">
-                <p>{item.answer}</p>
-              </div>
-            )}
-          </div>
-        ))}
+    <div className="px-4 container py-12 mx-auto md:px-6 lg:max-w-6xl dark:bg-darkBg">
+      <div className="text-center mb-10">
+        <h2 className="text-3xl md:text-4xl text-gray-900 dark:text-darkLight mb-3">Frequently Asked Questions</h2>
+        <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Find answers to common questions about our medical camps</p>
       </div>
+
+      <div className="flex flex-col md:flex-row gap-10 items-center">
+        {/* FAQ Image */}
+        <div className="md:w-1/2 flex justify-center">
+          <img className="w-full max-w-[300px] md:max-w-none md:w-[350px] lg:w-[400px] transition-transform duration-500 hover:scale-105" src={faqIcon} alt="Illustration of people asking questions" />
+        </div>
+
+        {/* FAQ List */}
+        <div className="md:w-1/2 space-y-4">
+          {data.map((item, index) => (
+            <div key={index} className={`border-b border-gray-200 dark:border-gray-700 pb-4 transition-all duration-300 ${activeIndex === index ? 'bg-gray-50 dark:bg-darkCard rounded-lg p-4' : ''}`}>
+              <div className="flex justify-between items-center cursor-pointer" onClick={() => toggleAnswer(index)}>
+                <h3 className="text-lg md:text-xl text-gray-800 dark:text-gray-200">{item.question}</h3>
+                <span className="text-primary text-xl">{activeIndex === index ? '−' : '+'}</span>
+              </div>
+
+              {activeIndex === index && (
+                <div className="mt-3 text-gray-600 dark:text-gray-300 pl-2 animate-fadeIn">
+                  <p>{item.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

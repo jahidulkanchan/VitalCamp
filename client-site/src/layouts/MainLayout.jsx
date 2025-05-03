@@ -10,7 +10,10 @@ const MainLayout = () => {
         <ScrollRestoration />
         <Outlet></Outlet>
       </section>
-      <Footer />
+      <section className="dark:bg-darkBg">
+        {' '}
+        <Footer />
+      </section>
     </>
   );
 };
