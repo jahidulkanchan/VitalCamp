@@ -1,26 +1,26 @@
-import { useState } from "react";
-import { FaBarsStaggered } from "react-icons/fa6";
-import { RxCross1, RxCross2 } from "react-icons/rx";
-import { Link, NavLink, useNavigate } from "react-router-dom";
-import logoIcon from "/VitalCamp.png"
-import { useAuth } from "../../hooks/useAuth";
-import useAdmin from "../../hooks/useAdmin";
-import { IoNotificationsOutline } from "react-icons/io5";
-import useAxiosSecure from "../../hooks/useAxiosSecure";
-import { useQuery } from "@tanstack/react-query";
-import Notification from "../../components/Notification";
-import { MdOutlineArrowDropDown } from "react-icons/md";
-import ThemeToggle from "../../components/ThemeToggle";
+import { useQuery } from '@tanstack/react-query';
+import { useState } from 'react';
+import { FaBarsStaggered } from 'react-icons/fa6';
+import { IoNotificationsOutline } from 'react-icons/io5';
+import { MdOutlineArrowDropDown } from 'react-icons/md';
+import { RxCross1, RxCross2 } from 'react-icons/rx';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
+import Notification from '../../components/Notification';
+import ThemeToggle from '../../components/ThemeToggle';
+import useAdmin from '../../hooks/useAdmin';
+import { useAuth } from '../../hooks/useAuth';
+import useAxiosSecure from '../../hooks/useAxiosSecure';
+import logoIcon from '/VitalCamp.png';
 
 const Navbar = () => {
-  const navigate = useNavigate()
-  const [isAdmin] =useAdmin()
-  const axiosSecure = useAxiosSecure()
-  const {user,signOutUser} =useAuth()
-  const [isShowNotifation,setIsShowNotifation] = useState(false)
-  const [isShow, setIsShow] = useState(false)
-  const [isHidden, setIsHidden] = useState(true)
- const handleToggleUser = () => {
+  const navigate = useNavigate();
+  const [isAdmin] = useAdmin();
+  const axiosSecure = useAxiosSecure();
+  const { user, signOutUser } = useAuth();
+  const [isShowNotifation, setIsShowNotifation] = useState(false);
+  const [isShow, setIsShow] = useState(false);
+  const [isHidden, setIsHidden] = useState(true);
+  const handleToggleUser = () => {
     setIsHidden(!isHidden);
     setIsShow(false);
     setIsShowNotifation(false);
@@ -29,7 +29,7 @@ const Navbar = () => {
   const handleToggleBar = () => {
     setIsShow(!isShow);
     setIsHidden(true);
-    setIsShowNotifation(false); 
+    setIsShowNotifation(false);
   };
 
   const handleToggleNotification = () => {
@@ -37,22 +37,22 @@ const Navbar = () => {
     setIsHidden(true);
     setIsShow(false);
   };
-  const handleSignOutUser = ()=>{
-    signOutUser()
-    navigate('/')
-    window.scrollTo(0, 0)
-  }
+  const handleSignOutUser = () => {
+    signOutUser();
+    navigate('/');
+    window.scrollTo(0, 0);
+  };
   // Show notification data =========
-  const {data: notifications=[]} = useQuery({
+  const { data: notifications = [] } = useQuery({
     queryKey: ['notifications', user?.email],
-    queryFn: async()=>{
-      const res = await axiosSecure.get(`notification/${user?.email}`)
-      return res.data
-    }
-  })
+    queryFn: async () => {
+      const res = await axiosSecure.get(`notification/${user?.email}`);
+      return res.data;
+    },
+  });
   return (
     <>
-      <section className="shadow fixed left-0 w-full z-20 top-0 bg-slate-50 dark:bg-slate-900 py-5">
+      <section className="shadow fixed left-0 w-full z-20 top-0 bg-slate-50 dark:bg-darkBg py-5">
         <div className="container relative px-2 md:px-5 mx-auto">
           <nav className="flex justify-between items-center">
             <div>
@@ -65,10 +65,10 @@ const Navbar = () => {
             </div>
 
             {/* Menu section */}
-            <div className="menu lg:bg-white dark:lg:bg-slate-800 lg:shadow-sm lg:px-5 md:py-2 lg:rounded-md">
+            <div className="menu lg:bg-white dark:lg:bg-darkCard lg:shadow-sm lg:px-5 md:py-2 lg:rounded-md">
               <ul
                 className={`lg:flex w-fit text-sm text-left z-10 py-5 lg:py-0 lg:bg-transparent space-y-5 lg:space-y-0 px-5 -right-3 mx-auto absolute lg:static flex-col justify-start lg:flex-row gap-5 items-start top-[55px] md:top-[63px] ${
-                  isShow ? 'block bg-white dark:bg-slate-800' : 'hidden'
+                  isShow ? 'block bg-white dark:bg-darkCard' : 'hidden'
                 }`}>
                 <li
                   onClick={() => {
@@ -103,7 +103,7 @@ const Navbar = () => {
 
               {/* Dropdown user menu */}
               {user && (
-                <div className={`flex-col bg-white dark:bg-slate-800 border dark:border-slate-600 px-5 absolute w-fit right-0 top-[60px] py-3 gap-5 items-center ${!isHidden ? 'flex' : 'hidden'}`}>
+                <div className={`flex-col bg-white dark:bg-darkCard border dark:border-slate-600 px-5 absolute w-fit right-0 top-[60px] py-3 gap-5 items-center ${!isHidden ? 'flex' : 'hidden'}`}>
                   <div className="flex justify-center flex-col items-center">
                     <ul className="space-y-1 text-black dark:text-white">
                       <li>{user?.displayName}</li>
@@ -134,9 +134,9 @@ const Navbar = () => {
                   <div
                     title="Profile Details"
                     onClick={() => handleToggleUser()}
-                    className="w-fit flex items-center gap-0 justify-between border border-primary overflow-hidden cursor-pointer rounded-full bg-slate-50 dark:bg-slate-700 px-2">
+                    className="w-fit flex items-center gap-0 justify-between border border-primary overflow-hidden cursor-pointer rounded-full bg-slate-50 dark:bg-darkCard px-2">
                     <img className="min-h-[30px] w-8" src={user?.photoURL} alt="profilePhoto" />
-                    <span>
+                    <span className="dark:text-white">
                       <MdOutlineArrowDropDown />
                     </span>
                   </div>
@@ -149,7 +149,7 @@ const Navbar = () => {
                       </span>
 
                       {isShowNotifation && (
-                        <div className="notification-content cursor-default w-[300px] flex flex-col items-center justify-center shadow-md py-8 bg-white dark:bg-slate-800 absolute top-[50px] -right-9">
+                        <div className="notification-content cursor-default w-[300px] flex flex-col items-center justify-center shadow-md py-8 bg-white dark:bg-darkCard absolute top-[50px] -right-9">
                           <button
                             onClick={() => {
                               handleToggleUser();
