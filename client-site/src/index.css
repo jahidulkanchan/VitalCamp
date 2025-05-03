@@ -14,6 +14,9 @@
 }
 
 @layer utilities{
+  .container{
+   @apply lg:max-w-[1250px]
+  }
   .loader {
     width: 48px;
     height: 48px;
