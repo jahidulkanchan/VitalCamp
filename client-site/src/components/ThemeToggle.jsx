@@ -3,7 +3,10 @@ import { IoMdSunny } from 'react-icons/io';
 import { MdDarkMode } from 'react-icons/md';
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('theme') || 'light'; // 👈 Default is now 'light'
+  });
+
   useEffect(() => {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
@@ -17,7 +20,7 @@ const ThemeToggle = () => {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
   };
 
   return (
