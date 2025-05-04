@@ -10,6 +10,7 @@ import Swal from 'sweetalert2';
 import Pagination from '../../components/Pagination';
 import SearchInput from '../../components/SearchInput';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
+import { FiAlertCircle } from 'react-icons/fi';
 
 const ManageCamp = () => {
   const axiosSecure = useAxiosSecure();
